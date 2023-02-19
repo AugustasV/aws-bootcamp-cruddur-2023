@@ -47,3 +47,11 @@ How it should be implemented, without actual names
 * Use AWS's well-architected framework to review your workloads against current AWS best practices. The main idea is to ask the right questions without getting too caught up in infrastructure.
 * Knowing the AWS well-architected framework allows you to ask stakeholders and engineers the right questions.
 * It's good to ask what the goal of this meeting is, especially if they have different backgrounds. Try to overcome your fear of asking "dumb questions" and ask about architecture.
+
+## Insights
+* In AWS right now it's possible to select black theme and default region (no more switching) https://aws.amazon.com/about-aws/whats-new/2022/04/unified-settings-aws-management-console/
+
+## Security
+* It's good security practice to grant least access as posible, use AWS Organizations. Force to use MFA to spin up ec2 instances. Yubikey is also supported by AWS for 2FA.
+* Great aws organizations policy resources https://github.com/hashishrajan/aws-scp-best-practice-policies
+* Least privilages as possible
