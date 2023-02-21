@@ -55,3 +55,9 @@ How it should be implemented, without actual names
 * It's good security practice to grant least access as posible, use AWS Organizations. Force to use MFA to spin up ec2 instances. Yubikey is also supported by AWS for 2FA.
 * Great aws organizations policy resources https://github.com/hashishrajan/aws-scp-best-practice-policies
 * Least privilages as possible
+
+## Architecture design
+Sharing conceptional and Logic diagrams. Conceptional diagram was draw on real napkin, picture uploaded to chart.
+> https://lucid.app/lucidchart/46cad15b-f4eb-4a9e-a88f-4608e524253a/edit?invitationId=inv_187a3bf1-f0b3-4fbc-8883-7d85df761478&page=0_0#
+And conceptional diagram:
+> https://lucid.app/lucidchart/46cad15b-f4eb-4a9e-a88f-4608e524253a/edit?viewport_loc=-1470%2C-1148%2C3234%2C1576%2C9o6y40-67mdX&invitationId=inv_187a3bf1-f0b3-4fbc-8883-7d85df761478
