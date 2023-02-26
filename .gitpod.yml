@@ -4,6 +4,7 @@ vscode:
     - 42Crunch.vscode-openapi
     - amazonwebservices.aws-toolkit-vscode
     - ms-azuretools.vscode-docker
+    - valentjn.vscode-ltex
 tasks:
   - name: aws-cli
     env:
