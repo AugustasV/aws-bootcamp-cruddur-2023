@@ -38,4 +38,8 @@ Source: https://github.com/facebook/create-react-app/issues/11174
 Learned about security, scanned this repo with Snyk.
 
 ## Enabling notifications
-First we have to update open API file, then make changes in flask backend files. In App.py we have to import it. Need to make sure that classes, naming are correct. Terminal logs show where are issues.
+First we have to update open API file, then make changes in flask backend files. In app.py we have to import it. Need to make sure that classes, naming are correct. Terminal logs show where are issues. Added new `notification_activities.py` file for backend.
+
+##### Frontend
+
+Had to create new page, css file for notifications. Also edited component DesktopNavigation - to add that new page section of notifications in frontend.
