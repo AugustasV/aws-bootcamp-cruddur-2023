@@ -16,7 +16,7 @@ For dev environment you have base image of Ubuntu, with all tools that could be 
 
 * Those API calls/results are hard coded, so it's easy to find them in honeycomb, filter out, see when error occurred in what time specifically.
 
-## Whats the difference between observability and monitoring
+## What's the difference between observability and monitoring
 
 It's how question is asked, different things
 ### Monitoring
@@ -24,7 +24,13 @@ Thinking about if system is available, if system is healthy, if fault happened w
 ### Observability
 Thinking for how long system is up, what system is doing, what is the fault reason, also thinking how to prevent the issue from reoccurring.
 
-## 3 pillars of observability
-Metrics - are useful to know key information about the system, real time state performance and utilization of application.
-Traces - uses unique identifiers to track requests as they flow from frontend devices to backend services and databases. 
-Logs - textual format of things what happening in the system.
+### 3 pillars of observability
+* Metrics - are useful to know key information about the system, real time state performance and utilization of application.
+* Traces - uses unique identifiers to track requests as they flow from frontend devices to backend services and databases. 
+* Logs - textual format of things what happening in the system.
+
+## AWS X-Ray
+
+X-Ray is middle ware software for analysis, traces collection. It's pretty straightforward way to get started, just need to install `aws-xray-sdk` package for python, pass AWS credentials for container, and we are good to go. Interesting that X-Ray could show services map, useful than more microservices would be used in place, not for now.
+
+But configuration/setup is pretty clunky and takes much time to do some stuff that on AWS X-Ray - it's pretty hard to use. Sometimes it's just not worth a time, as there is plenty alternatives around.
