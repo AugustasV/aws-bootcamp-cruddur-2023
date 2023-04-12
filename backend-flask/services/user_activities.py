@@ -32,5 +32,5 @@ class UserActivities:
       "now": now.isoformat(),
       "results-size": len(model['data'])
     }
-    segment.put_metadata('key', dict, 'namespace')
+    subsegment.put_metadata('key', dict, 'namespace')
     return model

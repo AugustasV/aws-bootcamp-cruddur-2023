@@ -33,4 +33,8 @@ Thinking for how long system is up, what system is doing, what is the fault reas
 
 X-Ray is middle ware software for analysis, traces collection. It's pretty straightforward way to get started, just need to install `aws-xray-sdk` package for python, pass AWS credentials for container, and we are good to go. Interesting that X-Ray could show services map, useful than more microservices would be used in place, not for now.
 
-But configuration/setup is pretty clunky and takes much time to do some stuff that on AWS X-Ray - it's pretty hard to use. Sometimes it's just not worth a time, as there is plenty alternatives around.
+But configuration/setup is pretty clunky and takes much time to do some stuff that on AWS X-Ray - it's pretty hard to use. Sometimes it's just not worth a time, as there is plenty alternatives around. But I made it work, I could see Error (4xx) trace. 
+
+## Rollbar
+
+When an error occurs in an application, Rollbar detects it and sends a notification to the developer or team responsible for the application. This allows them to quickly diagnose and fix the issue, reducing downtime and improving overall application performance. It tries to show where exactly error happened and how to fix it. I could see many parameters of error - what programming language, server information like host, pid, root, uuid.
