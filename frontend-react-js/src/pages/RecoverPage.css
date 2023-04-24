@@ -14,6 +14,12 @@ article.recover-article {
   background: #8819f5;
 }
 
+/* Tried to change error message color, didn't worked */
+.errors {
+  color: white;
+  background-color: red;
+}
+
 article.recover-article .recover-wrapper {
   background: #202124;
   width: 560px;
