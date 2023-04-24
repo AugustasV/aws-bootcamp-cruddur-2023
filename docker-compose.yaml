@@ -13,6 +13,8 @@ services:
       AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
       AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
       ROLLBAR_ACCESS_TOKEN: "${ROLLBAR_ACCESS_TOKEN}"
+      AWS_COGNITO_USER_POOL_ID: "us-east-2_10s0M5FZq"
+      AWS_COGNITO_USER_POOL_CLIENT_ID: "61dfkoov0oqh678c1sdudb31a"
     build: ./backend-flask
     ports:
       - "4567:4567"
@@ -24,8 +26,8 @@ services:
       REACT_APP_AWS_PROJECT_REGION: "${AWS_DEFAULT_REGION}"
       REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID: "${AWS_DEFAULT_REGION}"
       REACT_APP_AWS_COGNITO_REGION: "${AWS_DEFAULT_REGION}"
-      REACT_APP_AWS_USER_POOLS_ID: "us-east-2_bHzVoX4G3"
-      REACT_APP_CLIENT_ID: "6k7fscgg98f6ablddf42v8fjsf"
+      REACT_APP_AWS_USER_POOLS_ID: "us-east-2_10s0M5FZq"
+      REACT_APP_CLIENT_ID: "61dfkoov0oqh678c1sdudb31a"
     build: ./frontend-react-js
     ports:
       - "3000:3000"
