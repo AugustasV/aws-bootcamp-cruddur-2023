@@ -12,7 +12,7 @@ What is Amazon Cognito? It’s a user directory with a context of Amazon Web Ser
 
 After importing AWS Amplify libraries, configuring the behavior of what could be seen when logged in and what could be shown all the time. 
 
-I ran out of space and used the `docker prune` command - That reclaimed 20 GB of data. 
+I ran out of space and used the `docker system prune` command - That reclaimed 20 GB of data. 
 Added a sign-in form on the Sign Page so that AWS Cognito would be in place instead of using cookies. At first, you just did console.log to show errors in the console. You mixed up some variables, but now it’s all good, and you can see error messages on the Sign page.
 
 It is strange that when creating a user in AWS Cognito UI, the user gets stuck in a strange state where they are prompted to change their password, and this cannot be fixed through the UI. To resolve this issue, I used the AWS CLI to run the following command:

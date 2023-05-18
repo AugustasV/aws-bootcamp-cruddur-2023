@@ -13,3 +13,5 @@ Created bash scripts, so it's easier to manipulate with development local docker
 Database schema is like different namespaces in database. There is default namespace Public, it goes there if we are not specifying.
 Created schema is in `backend-flash/db/schema.sql` file. It's empty namespaces
 Seed.sql is mock up data to fill schema.sql file, so we could check if fields we created, and database created would fit.
+
+Installing PostgreSQL python driver is needed to integrate code with database. Specifying connection pool - so we would limit how many connections could be made at once
