@@ -14,6 +14,7 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 from services.notifications_activities import *
+from lib.db import pool, query_wrap_array
 
 from lib.cognito_token import CognitoToken, extract_access_token, TokenVerifyError
 

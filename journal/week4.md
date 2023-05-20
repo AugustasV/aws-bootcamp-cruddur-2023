@@ -15,3 +15,5 @@ Created schema is in `backend-flash/db/schema.sql` file. It's empty namespaces
 Seed.sql is mock up data to fill schema.sql file, so we could check if fields we created, and database created would fit.
 
 Installing PostgreSQL python driver is needed to integrate code with database. Specifying connection pool - so we would limit how many connections could be made at once
+
+Added GitHub Codespaces config, so I could have same environment on GitHub Codespaces platform or on local machine if I would open code in container (because it has.devcontainer file). This approach works, but it's super slow, so will be used only as alternative.
