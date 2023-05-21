@@ -14,7 +14,6 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 from services.notifications_activities import *
-from lib.db import pool, query_wrap_array
 
 from lib.cognito_token import CognitoToken, extract_access_token, TokenVerifyError
 
@@ -27,11 +26,11 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
 # AWS X-Ray
-from aws_xray_sdk.core import xray_recorder
-from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
+# from aws_xray_sdk.core import xray_recorder
+# from aws_xray_sdk.ext.flask.middleware import XRayMiddleware
 
-xray_url = os.getenv("AWS_XRAY_URL")
-xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+# xray_url = os.getenv("AWS_XRAY_URL")
+# xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 # Cloudwatch libs
 import watchtower
@@ -77,10 +76,10 @@ cognito_token = CognitoToken (
 )
 
 # X-ray
-XRayMiddleware(app, xray_recorder)
-# Initialize automatic instrumentation with Flask
-FlaskInstrumentor().instrument_app(app)
-RequestsInstrumentor().instrument()
+# XRayMiddleware(app, xray_recorder)
+# # Initialize automatic instrumentation with Flask
+# FlaskInstrumentor().instrument_app(app)
+# RequestsInstrumentor().instrument()
 
 frontend = os.getenv('FRONTEND_URL')
 backend = os.getenv('BACKEND_URL')
