@@ -151,8 +151,8 @@ def data_create_message():
   return
 
 @app.route("/api/activities/home", methods=['GET'])
+#@xray_recorder.capture('activities_home')
 def data_home():
-  app.logger.debug(request.headers)
   access_token = extract_access_token(request.headers)
   try:
     claims = cognito_token.verify(access_token)
@@ -160,7 +160,7 @@ def data_home():
     app.logger.debug("authenticated")
     app.logger.debug(claims)
     app.logger.debug(claims['username'])
-    data = HomeActivities.run(cognito_user_id=claims['username'])
+    data = HomeActivities.run(user_cognito_id=claims['username'])
   except TokenVerifyError as e:
     # unauthenicatied request
     app.logger.debug(e)
@@ -175,6 +175,7 @@ def data_notifications():
 
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
+#@xray_recorder.capture('activities_users')
 def data_handle(handle):
   model = UserActivities.run(handle)
   if model['errors'] is not None:
@@ -195,7 +196,7 @@ def data_search():
 @app.route("/api/activities", methods=['POST','OPTIONS'])
 @cross_origin()
 def data_activities():
-  user_handle  = 'andrewbrown'
+  user_handle = request.json["user_handle"]
   message = request.json['message']
   ttl = request.json['ttl']
   model = CreateActivity.run(message, user_handle, ttl)
@@ -206,6 +207,7 @@ def data_activities():
   return
 
 @app.route("/api/activities/<string:activity_uuid>", methods=['GET'])
+@xray_recorder.capture('activities_show')
 def data_show_activity(activity_uuid):
   data = ShowActivity.run(activity_uuid=activity_uuid)
   return data, 200

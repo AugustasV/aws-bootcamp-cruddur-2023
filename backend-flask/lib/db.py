@@ -26,8 +26,6 @@ class Db:
   def init_pool(self):
     connection_url = os.getenv("CONNECTION_URL")
     self.pool = ConnectionPool(connection_url)
-  # we want to commit data such as an insert
-  # be sure to check for RETURNING in all uppercases
   def print_params(self,params):
     blue = '\033[94m'
     no_color = '\033[0m'
@@ -78,10 +76,7 @@ class Db:
       with conn.cursor() as cur:
         cur.execute(wrapped_sql,params)
         json = cur.fetchone()
-        if json == None:
-          "{}"
-        else:
-          return json[0]
+        return json[0]
   def query_wrap_object(self,template):
     sql = f"""
     (SELECT COALESCE(row_to_json(object_row),'{{}}'::json) FROM (
