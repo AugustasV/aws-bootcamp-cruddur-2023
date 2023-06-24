@@ -42,4 +42,29 @@ People often struggle with single table design when they don't know how to inter
 - Use Site-to-Site VPN or Direct Connect for accessing DynamoDB from on-premises systems.
 - Amazon recommends client-side encryption for DynamoDB.
 
-Creating bash scripts for dynamodb, so it will be easier to prepare seed data.
+Creating bash scripts for DynamoDB, so it will be easier to prepare seed data.
+
+For debugging checking logs, specific responses inside browser console.
+To check database tables using command `SELECT * from users;` and `\x auto` for better looking output
+Ctrl + P is useful combination in VS code to jump between files
+
+Many different parts, so I had to debug step by step to find the cause, because messages is not shown yet
+
+* Checking development for DynamoDB vars(endpoint url is being set for the AWS CLI)
+* Checking inside database by performing a scan using utility script
+* Checking implementation in the lib file vs the bin/patterns/list-conversations, if one of them working
+
+Usefull commands to run each time starting Gitpod
+```
+./bin/db/setup
+./bin/ddb/schema-load 
+./bin/ddb/seed
+```
+It works!
+```
+[2023-Jun-24 20:57] 192.168.149.76 GET http /api/messages/5ae290ed-55d1-47a0-bc6d-fe2bc2700399? 200 OK
+[2023-Jun-24 20:57] 192.168.149.76 GET http /api/message_groups? 200 OK
+192.168.149.76 - - [24/Jun/2023 20:57:02] "GET /api/message_groups HTTP/1.1" 200 -
+192.168.149.76 - - [24/Jun/2023 20:57:02] "GET /api/messages/5ae290ed-55d1-47a0-bc6d-fe2bc2700399 HTTP/1.1" 200 -
+```
+UUIDS in database and DynamoDB must match

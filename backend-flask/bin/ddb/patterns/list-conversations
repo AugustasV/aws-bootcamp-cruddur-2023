@@ -31,8 +31,9 @@ def get_my_user_uuid():
     WHERE
       users.handle =%(handle)s
   """
-  uuid = db.query_array_json(sql,{
-    'handle':  'Auguszzz'
+  uuid = db.query_value(sql,{
+    'handle':  'Auguszzz',
+    'handle':  'Augustsz',
   })
   return uuid
 
