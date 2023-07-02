@@ -1,5 +1,5 @@
 # Using alpine image, in that way we make build time shorter
-FROM python:alpine3.17
+FROM 194030184857.dkr.ecr.us-east-2.amazonaws.com/cruddur-python:3.10-slim-buster
 
 WORKDIR /backend-flask
 

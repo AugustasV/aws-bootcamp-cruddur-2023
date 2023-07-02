@@ -27,3 +27,12 @@ The `/journal` directory contains
 - [ ] [Week 11](journal/week11.md)
 - [ ] [Week 12](journal/week12.md)
 - [ ] [Week 13](journal/week13.md)
+
+
+  "loadBalancers": [
+    {
+        "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:194030184857:targetgroup/cruddur-backend-flask-tg/ed25339904cfe7bc",
+        "containerName": "backend-flask",
+        "containerPort": 4567
+    }
+  ],
