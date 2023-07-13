@@ -1,5 +1,5 @@
 # Using alpine image, in that way we make build time shorter
-FROM python:alpine3.17
+FROM 194030184857.dkr.ecr.us-east-2.amazonaws.com/cruddur-python:3.10-slim-buster
 
 WORKDIR /backend-flask
 
@@ -14,4 +14,4 @@ ENV FLASK_ENV=development
 # ENV FRONTEND_URL="*"
 
 EXPOSE ${PORT}
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567", "--no-debug", "--no-debugger", "--no-reload"]
