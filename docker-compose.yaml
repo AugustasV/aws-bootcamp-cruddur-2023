@@ -1,3 +1,4 @@
+#for using with devpod, change localhost to instance local ip: http://172.22.0.5:3000
 version: "3.8"
 services:
   backend-flask:

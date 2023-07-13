@@ -1,11 +1,3 @@
-"loadBalancers": [
-    {
-        "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:194030184857:targetgroup/cruddur-frontend-reactjs-tg/37e4022a5da235f9",
-        "containerName": "frontend-react-js",
-        "containerPort": 3000
-    }
-  ],
-
 {
     "SamplingRule": {
         "RuleName": "Cruddur",

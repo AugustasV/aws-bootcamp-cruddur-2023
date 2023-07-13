@@ -6,8 +6,8 @@
     "cpu": "256",
     "memory": "512",
     "requiresCompatibilities": [ 
-        "FARGATE" 
-      ],
+      "FARGATE" 
+    ],
     "containerDefinitions": [
       {
         "name": "frontend-react-js",

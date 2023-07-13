@@ -53,3 +53,5 @@ When deploying containers on AWS and setting up a service mesh, AWS App Mesh and
 NAT (Network Address Translation) allows private network resources to access the internet. AWS provides NAT Gateway for this purpose, but it comes with a cost and needs to be deployed in each subnet. Creating VPC endpoints is another possibility, but unfortunately, it's not available for Cognito. Interface endpoints could work, but they are needed for every subnet.
 
 As an alternative, you can consider using [Alternat](https://github.com/1debit/alternat). It functions similarly to a AWS NAT Instance, allowing you to create a VM to meet your needs. The AWS NAT Instance has reached its end of life and is no longer actively supported. Only security updates will be provided for it going forward.
+
+Instances was working, created and attached loadbalancer, domain added to route53.
